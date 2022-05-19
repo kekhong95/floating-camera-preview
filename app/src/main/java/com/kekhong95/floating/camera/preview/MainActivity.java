@@ -1,10 +1,5 @@
 package com.kekhong95.floating.camera.preview;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -12,12 +7,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.kekhong95.floating.camera.lib.CameraCustomView;
 import com.kekhong95.floating.camera.lib.CameraWindow;
 
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.RECORD_AUDIO;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class MainActivity extends AppCompatActivity {
     public final static int REQUEST_CODE_OVERLAY_PERMISSION = 100;

@@ -23,7 +23,8 @@ public class CameraWindow {
     private int statusBarHeight = 0;
     private boolean dragFlag = false;
     private CameraCustomView.CameraCustomViewListener listener;
-    public CameraWindow(Context context , CameraCustomView.CameraCustomViewListener listener) {
+
+    public CameraWindow(Context context, CameraCustomView.CameraCustomViewListener listener) {
         this.context = context;
         this.listener = listener;
     }
@@ -69,9 +70,22 @@ public class CameraWindow {
         addDragFunction();
     }
 
+    public void close() {
+        if (mPreview != null) {
+            try {
+                mPreview.close();
+                windowManager.removeView(rootLayout);
+            } catch (Exception e) {
+                e.printStackTrace();
+                if (listener != null) listener.onClose();
+            }
+        }
+    }
+
     private void addDragFunction() {
         rootLayout.setOnTouchListener(new View.OnTouchListener() {
             private int lastAction = MotionEvent.ACTION_UP;
+
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 

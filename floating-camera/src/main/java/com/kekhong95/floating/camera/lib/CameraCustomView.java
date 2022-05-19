@@ -52,6 +52,11 @@ public class CameraCustomView extends RelativeLayout implements SurfaceHolder.Ca
         this.listener = listener;
     }
 
+    public void close() {
+        surfaceView.getHolder().removeCallback(this);
+        releaseCamera();
+    }
+
     public interface CameraCustomViewListener {
         void onClose();
 

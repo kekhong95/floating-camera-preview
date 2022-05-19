@@ -1,0 +1,3 @@
+rootProject.name = "Floating-Camera-Preview"
+include ':app'
+include ':floating-camera'

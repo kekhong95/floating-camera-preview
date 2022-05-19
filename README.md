@@ -35,7 +35,7 @@ window.create();
 window.close();
 ```
 
-## Contributing
+## Preview
 ![Alt Text](https://github.com/kekhong95/floating-camera-preview/blob/main/ezgif.com-gif-maker.gif)
 
 ## License
